@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.funhouse.mainscreenff">
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.funhouse.mainscreenff.MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.NumberActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.AbcActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnAlphabets"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnNumbers"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnCounting"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnWords"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnShape"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnColors"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnFruits"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnVegetables"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.Learn_Animals"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.DrawingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.splash"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LearnDoodle"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.QuizResult"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.MathQuiz"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.QuizEnglish"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.MainTwoSection"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.funhouse.mainscreenff.LetsLearn"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.example.funhouse.mainscreenff.QuizResultEng"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>

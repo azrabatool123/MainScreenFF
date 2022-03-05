@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "817564221056",
+    "firebase_url": "https://kidssmarteducationapp.firebaseio.com",
+    "project_id": "kidssmarteducationapp",
+    "storage_bucket": "kidssmarteducationapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817564221056:android:71376b81bdd4f4fd",
+        "android_client_info": {
+          "package_name": "com.example.shafqat.mainscreenff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817564221056-lat1bnu77mitb2uomsl4uk7v2v1b0b0j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shafqat.mainscreenff",
+            "certificate_hash": "3db91bf0c70f7c4129a72fa1021fdcf476b88bfd"
+          }
+        },
+        {
+          "client_id": "817564221056-tq00ho69sq7lh6u8pcpkslk0kha9m9lg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ4wwnEaBAJO62180MvEeTftNkPvcOSJc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817564221056-tq00ho69sq7lh6u8pcpkslk0kha9m9lg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

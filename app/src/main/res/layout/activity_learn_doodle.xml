@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.funhouse.mainscreenff.LearnDoodle">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191">
+
+    </LinearLayout>
+
+
+    <com.example.funhouse.mainscreenff.DrawingView
+        android:id="@+id/drawing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.651"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="45dp"
+        android:layout_height="282dp"
+        android:layout_marginEnd="243dp"
+        android:layout_marginRight="243dp"
+        android:src="@drawable/left_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <LinearLayout
+        android:layout_width="52dp"
+        android:layout_height="310dp"
+        android:layout_marginBottom="8dp"
+
+        android:background="@color/colorAccentMain"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
+        />
+
+        <ImageView
+            android:id="@+id/new_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/start_new"
+            android:src="@drawable/new_pic"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/draw_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/brush"
+            android:src="@drawable/btn_brush_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.265" />
+
+        <ImageView
+            android:id="@+id/erase_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/erase"
+            android:src="@drawable/btn_eraser_3"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+
+        <ImageView
+            android:id="@+id/save_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/save"
+            android:src="@drawable/btn_save_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/paint_colors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/colorAccentMain"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/brown_9"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#e956270e" />
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/black_10"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#000000"
+            tools:layout_editor_absoluteX="240dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/red_2"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#FFFF0000" />
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/orange_3"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#FFFF6600" />
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/yellow_4"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#FFFFCC00" />
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/green_5"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#f759ff00" />
+
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/blue_6"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#00a6ff"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="-12dp" />
+
+        <ImageButton
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/blue_7"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#FF990099"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="157dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/icons"
+            android:layout_height="@dimen/icons"
+            android:layout_margin="2dp"
+            android:background="@drawable/white_1"
+            android:contentDescription="@string/paint"
+            android:onClick="paintClicked"
+            android:src="@drawable/paint"
+            android:tag="#FFFFFFFF"
+            tools:layout_editor_absoluteX="-30dp"
+            tools:layout_editor_absoluteY="12dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="42dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="60dp"
+        android:maxWidth="120dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivntxt"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
