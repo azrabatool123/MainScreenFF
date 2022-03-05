@@ -9,32 +9,33 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class splash extends AppCompatActivity {
-ImageView two,three,four;
+    ImageView two, three, four;
     private static int SPLASH_TIME_OUT = 3000;
-MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        two=(ImageView)findViewById(R.id.twos);
-        three=(ImageView)findViewById(R.id.threes);
-        four=(ImageView)findViewById(R.id.fours);
+        two = (ImageView) findViewById(R.id.twos);
+        three = (ImageView) findViewById(R.id.threes);
+        four = (ImageView) findViewById(R.id.fours);
         test();
-            new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
 
 
-                @Override
-                public void run() {
-                    // This method will be executed once the timer is over
-                    // Start your app main activity
-                    Intent i = new Intent(splash.this, MainTwoSection.class);
-                    startActivity(i);
+            @Override
+            public void run() {
+                // This method will be executed once the timer is over
+                // Start your app main activity
+                Intent i = new Intent(splash.this, MainTwoSection.class);
+                startActivity(i);
 
-                    // close this activity
-                    finish();
-                }
-            }, SPLASH_TIME_OUT);
+                // close this activity
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
 
 
         two.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +69,7 @@ MediaPlayer mediaPlayer;
 
     }
 
-    public void test(){
+    public void test() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -102,11 +103,12 @@ MediaPlayer mediaPlayer;
             }
         }, 2500);
     }
+
     protected void onStart() {
         super.onStart();
 
-       mediaPlayer = MediaPlayer.create(splash.this,
+        mediaPlayer = MediaPlayer.create(splash.this,
                 R.raw.welcome);
-       mediaPlayer.start();
+        mediaPlayer.start();
     }
 }
