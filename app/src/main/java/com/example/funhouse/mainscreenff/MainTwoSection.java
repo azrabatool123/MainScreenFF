@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.funhouse.mainscreenff.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,19 +34,20 @@ public class MainTwoSection extends AppCompatActivity {
     DatabaseReference users;
 
 
-
     public static final String Users = "Users";
-ImageView letsLEarn,letsPlay, feedback;
+    ImageView letsLEarn, letsPlay, feedback, setting;
     MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_two_section);
 
-        letsLEarn=(ImageView)findViewById(R.id.letslearn);
-        letsPlay=(ImageView)findViewById(R.id.letsplay);
-        feedback=(ImageView)findViewById(R.id.feedback);
+        letsLEarn = (ImageView) findViewById(R.id.letslearn);
+        letsPlay = (ImageView) findViewById(R.id.letsplay);
+        feedback = (ImageView) findViewById(R.id.feedback);
+        setting = (ImageView) findViewById(R.id.iv_setting);
 
 
         auth = FirebaseAuth.getInstance();
@@ -61,31 +63,35 @@ ImageView letsLEarn,letsPlay, feedback;
             }
         });
 
-
-
-
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainTwoSection.this, "In Progress", Toast.LENGTH_SHORT).show();
+            }
+        });
         letsLEarn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainTwoSection.this,LetsLearn.class);
-                        startActivity(intent);
+                Intent intent = new Intent(MainTwoSection.this, LetsLearn.class);
+                startActivity(intent);
                 cleanup();
-                mp= MediaPlayer.create(MainTwoSection.this,R.raw.buttonclicksound);
+                mp = MediaPlayer.create(MainTwoSection.this, R.raw.buttonclicksound);
                 mp.start();
             }
         });
         letsPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainTwoSection.this,MainActivity.class);
+                Intent intent = new Intent(MainTwoSection.this, MainActivity.class);
                 startActivity(intent);
                 cleanup();
-                mp=MediaPlayer.create(MainTwoSection.this,R.raw.buttonclicksound);
+                mp = MediaPlayer.create(MainTwoSection.this, R.raw.buttonclicksound);
                 mp.start();
             }
         });
     }
-//    @Override
+
+    //    @Override
 //    protected void onStop() {
 //        super.onStop();
 //
@@ -94,7 +100,7 @@ ImageView letsLEarn,letsPlay, feedback;
 //        }
 //    }
     public void cleanup() {
-        if (mp!= null && mp.isPlaying()) {
+        if (mp != null && mp.isPlaying()) {
             mp.stop();
             mp.release();
             mp = null;
@@ -102,8 +108,7 @@ ImageView letsLEarn,letsPlay, feedback;
     }
 
 
-    private void showButtonDialog()
-    {
+    private void showButtonDialog() {
         final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         LayoutInflater inflater = LayoutInflater.from(this);
         View layout_buttons = inflater.inflate(R.layout.layout_buttons, null);
@@ -189,12 +194,13 @@ ImageView letsLEarn,letsPlay, feedback;
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Snackbar.make(rootLayout,"failed...!!!" + e.getMessage(), Snackbar.LENGTH_SHORT)
+                                Snackbar.make(rootLayout, "failed...!!!" + e.getMessage(), Snackbar.LENGTH_SHORT)
                                         .show();
                             }
                         });
 
-            }});
+            }
+        });
 
 
         dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
@@ -229,11 +235,9 @@ ImageView letsLEarn,letsPlay, feedback;
         alert.show();
 
 
-
-
-
     }
-    public void ExitCode(View view){
+
+    public void ExitCode(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainTwoSection.this);
         builder.setTitle(R.string.app_name);
         builder.setIcon(R.mipmap.ic_launcher);
